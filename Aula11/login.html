@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background: rgb(124, 110, 248);
+        }
+        h1#titulo{
+            font: normal 40pt Arial;
+            text-align: center;
+            height: 30px;;
+            color: white;
+            line-height: 90px;
+            
+        }
+        div {
+            font: normal 35pt Arial;
+            background: rgb(165, 164, 248);
+            color: rgb(0, 0, 0);
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+            line-height: 65px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+        }
+        input[type="text"]{
+            font: normal 16pt Arial;
+            width: 350px;
+            height: 40px;
+            background-color: rgb(231, 231, 231);
+            line-height: 150px;
+            border-radius: 8px;
+        }
+        input[type="button"]{
+            font: normal 16pt Arial;
+            width: 150px;
+            height: 40px;
+            line-height: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">LOGIN</h1>
+        <input type="text" name ='email' id ='email' placeholder="Digite seu email">
+        <input type="text" name ='senha' id ='senha' placeholder="Digite sua senha"><br>
+        <input type="button" value ='Entrar' id ='entrar' onclick="entrar()">
+    </div>
+    <script>
+        var txtemail = document.getElementById('email');
+        var txtsenha = document.getElementById('senha');
+        function entrar(){
+            var email = String(txtemail.value);
+            var senha = String(txtsenha.value);
+
+            if (email == "guilherme_silvan@yahoo.com" && senha == "123"){
+                alert("Bem-vindo!")
+            } else {
+                alert("Email ou senha incorretos")
+            }
+
+        }
+
+    </script>
+</body>
+</html>

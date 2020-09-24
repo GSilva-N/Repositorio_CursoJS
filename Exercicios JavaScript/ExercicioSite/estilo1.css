@@ -1,0 +1,40 @@
+body{
+    background: rgb(217, 241, 255);
+    font: normal 18pt Arial;
+    color: white;
+}
+
+section#cabeçalho{
+    background: rgb(34, 147, 240);
+    text-align: center;
+    padding: 10px;
+    height: 80px;
+    font: normal 25pt Arial;
+    line-height: 5px; 
+}
+section#populares{
+    padding: 50px;
+    height: 200px;
+}
+section#importados{
+    padding: 10px;
+}
+
+div#fotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+}
+div#titulo{
+    color: black;
+    font: normal 40pt Arial;
+    text-align: center;
+}
+
+footer{
+    color: black;
+    text-align: center;
+    font: normal 12pt Arial;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(156, 156, 231);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(251, 255, 0);
+        }
+        /* Comentário*/
+       
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1> <!-- Comentário -->
+    <p>Já me livrei da maldição!</p>
+    <script>
+    //prompt converte o valor da variavel para string
+       var num1 = Number.parseFloat(window.prompt("Digite um número"));
+       var num2 = Number.parseFloat(window.prompt("Digite outro número"));
+       var soma = num1 + num2;
+       window.alert(`A soma de ${num1} + ${num2} é ${soma}`); // Isso é Template Strings
+    </script> 
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            background: rgb(245, 245, 245);
+            font: normal 16pt Arial;
+        }
+        section{
+            background:rgb(56, 56, 56);
+            width: 380px;
+            height: 350px;
+            border-radius: 8px;
+            text-align: center;
+            margin: auto;
+        }
+        h1{
+            font: normal 30pt Arial;
+            text-align: center;
+            color: white;
+            line-height: 60px;
+
+        }
+
+        div#resultado {
+            font: normal 35pt Arial;
+            background: rgb(219, 253, 219);
+            color: rgb(0, 0, 0);
+            width: 340px;
+            height: 100px;
+            line-height: 150px;
+            text-align: right;
+            margin: auto;
+            border-radius: 7px;
+            
+
+        }
+        input[type="number"]{
+            font: normal 20pt Arial;
+            width: 160px;
+            align-items: center;
+            
+              
+        }
+        input[type="button"]{
+            font: normal 16pt Arial;
+            width: 80px;
+            height: 40px;
+            line-height: 100px;
+             
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <h1>Calculadora</h1>
+    <div id="resultado"> 0 </div><br>
+    <input type="Number" name ='txtn1' id ='txtn1' value="0">
+    <input type="number" name="txtn2" id="txtn2" value="0"><br><br>
+    <input type="button" value="+" onclick="somar()">
+    <input type="button" value="-" onclick="subtrair()">
+    <input type="button" value="%" onclick="dividir()">
+    <input type="button" value="x" onclick="multiplicar()">
+</section>
+    
+    <script>
+        var txtnum1 = document.getElementById('txtn1');
+        var txtnum2 = document.getElementById("txtn2");
+        var resultado = document.getElementById("resultado");
+        
+
+        function somar(){   
+            var num1 = Number(txtnum1.value);
+            var num2 = Number(txtnum2.value);
+            var soma = num1 + num2;
+            resultado.innerHTML = `<strong>${soma}</strong>`
+        }
+        function subtrair(){   
+            var num1 = Number(txtnum1.value);
+            var num2 = Number(txtnum2.value);
+            var subtração = num1 - num2;
+            resultado.innerHTML = `<strong>${subtração}</strong>`
+        }
+        function dividir(){   
+            var num1 = Number(txtnum1.value);
+            var num2 = Number(txtnum2.value);
+            var divisao = num1 / num2;
+            var arredondar = parseFloat(divisao.toFixed(6))
+            resultado.innerHTML = `<strong>${arredondar}</strong>`
+        }
+        function multiplicar(){   
+            var num1 = Number(txtnum1.value);
+            var num2 = Number(txtnum2.value);
+            var multiplicacao = num1*num2;
+            resultado.innerHTML = `<strong>${multiplicacao}</strong>`
+        }
+
+    
+    </script>
+    
+
+    
+</body>
+</html>

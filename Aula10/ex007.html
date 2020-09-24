@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <style>
+        body{
+            background: rgb(178, 178, 211);
+            font: normal 18pt Arial;
+        }
+        input[type="number"]{
+            font: normal 20pt Arial;
+            width: 100px;   
+        }
+        input[type="button"]{
+            font: normal 20pt Arial;
+             
+        }
+        div{
+            line-height: 50px;
+        }
+        h1 {
+            font: normal 25pt Arial;
+        }
+        input[type="text"]{
+            font: normal 20pt Arial;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SOMANDO VALORES</h1>
+
+    <input type="Number" name ='txtn1' id ='txtn1' value="0"> +
+    <input type="number" name="txtn2" id="txtn2" value="0">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id = 'resultado'>Resultado</div>
+
+    <h1>RECEBENDO O NOME</h1>
+    <input type="text" name="nome" id="n1" placeholder="Digite seu nome">
+    <input type="button" value="Inserir" onclick="inserir()">
+    <div id='seuNome'></div>
+
+    
+    <script>
+        function somar(){
+            var tn1 = document.getElementById('txtn1');
+            var tn2 = document.getElementById("txtn2");
+            var resultado = document.getElementById('resultado');
+            var num1 = Number.parseInt(tn1.value);
+            var num2 = Number.parseInt(tn2.value);
+            var soma = num1 + num2;
+            resultado.innerHTML = `A soma dos numeros é <strong>${soma}</strong>`;
+        }
+
+        function inserir(){
+            var n1 = document.getElementById("n1");
+            var seuNome = document.getElementById('seuNome');
+            var nome = String(n1.value);
+            seuNome.innerHTML = `Seu nome é <strong>${nome}</strong>`;
+
+        }
+    </script>
+</body>
+</html>
